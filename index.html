@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIOStreams | התקנת תוסף לסטרימיו</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #0f0f1a;
+            color: #e0e0e0;
+            line-height: 1.6;
+            padding: 20px;
+            margin: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 30px auto;
+            background: #1a1a2e;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+        h1 {
+            color: #00ff9d;
+            text-align: center;
+        }
+        .link-box {
+            background: #16213e;
+            padding: 15px;
+            border-radius: 10px;
+            word-break: break-all;
+            margin: 20px 0;
+            font-size: 14px;
+        }
+        .copy-btn {
+            background: #00ff9d;
+            color: #000;
+            border: none;
+            padding: 12px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+            margin: 15px 0;
+            display: block;
+            width: 100%;
+        }
+        .copy-btn:hover { background: #00cc7a; }
+        ol {
+            background: #16213e;
+            padding: 20px 40px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        .warning {
+            background: #330d0d;
+            border-left: 5px solid #ff4444;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>AIOStreams | noamin25 v2.17.5</h1>
+        <p style="text-align:center;">תוסף מקיף לסטרימיו עם זרימות איכותיות, תמיכה ב-Debrid, אנימה, סדרות וסרטים</p>
+
+        <h2>קישור ההתקנה (manifest):</h2>
+        <div class="link-box" id="manifestLink">
+            https://noamin25-aiostreams.elfhosted.com/stremio/a9b22ed7-e337-4471-9480-a66f64f3941b/eyJpdiI6InBlcmhrOHFKY0RpdWgrQmZpb0hMM3c9PSIsImVuY3J5cHRlZCI6ImxkZDJ0dmo4cWQrV1VCck96bUhjVURKRlBLQzFEMWpHYjBhczBYcnNmYnM9IiwidHlwZSI6ImFpb0VuY3J5cHQifQ/manifest.json
+        </div>
+
+        <button class="copy-btn" onclick="copyLink()">
+            📋 העתק קישור להתקנה
+        </button>
+
+        <h2>איך מתקינים (הכי פשוט שיש):</h2>
+        <ol>
+            <li>פתח את אפליקציית <strong>Stremio</strong> (בטלפון, מחשב או טלוויזיה)</li>
+            <li>לך ל-<strong>Add-ons</strong> (תוספים) ← סמל גלגל שיניים למעלה ימינה</li>
+            <li>לחץ על שורת החיפוש למעלה</li>
+            <li><strong>הדבק</strong> את הקישור שהעתקת למעלה (הדבקה ארוכה בטלפון)</li>
+            <li>לחץ Enter → יופיע התוסף → לחץ <strong>Install</strong></li>
+            <li>זהו! התוסף מותקן. תוכל לראות זרימות חדשות מיד</li>
+        </ol>
+
+        <div class="warning">
+            <strong>שימו לב:</strong> תוספים חיצוניים הם באחריות המשתמש. מומלץ להשתמש ב-VPN ולהזרים רק תוכן חוקי.
+        </div>
+
+        <p style="text-align:center; color:#888; font-size:14px;">
+            עובד על כל הגרסאות: אנדרואיד, iOS, Windows, Mac, Linux, Android TV
+        </p>
+    </div>
+
+    <script>
+        function copyLink() {
+            const link = document.getElementById("manifestLink").innerText;
+            navigator.clipboard.writeText(link).then(() => {
+                alert("✓ הקישור הועתק בהצלחה!");
+            }).catch(() => {
+                // גיבוי למכשירים ישנים
+                const textarea = document.createElement("textarea");
+                textarea.value = link;
+                document.body.appendChild(textarea);
+                textarea.select();
+                document.execCommand("copy");
+                document.body.removeChild(textarea);
+                alert("✓ הקישור הועתק!");
+            });
+        }
+    </script>
+</body>
+</html>
